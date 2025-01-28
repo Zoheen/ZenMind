@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .app {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .circle {
+    margin: 1.5rem auto;
+    background-color: #61dafb;
+    border-radius: 50%;
+    transition: width 4s ease-in-out, height 4s ease-in-out;
+  }
+  
+  .instruction {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeInOut 4s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+/* 
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+   */
