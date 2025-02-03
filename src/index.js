@@ -1,24 +1,12 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './App.css'; // Ensure this file exists
-// import App from './App'; // Ensure this file exists
-
-// ReactDOM.createRoot(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root') // Ensure this matches the id in index.html
-// );
-
-
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // ✅ Use React 18 method
-import './App.css';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+// import './App.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root')); // ✅ Correct method
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );

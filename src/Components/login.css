@@ -1,0 +1,44 @@
+.container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #A67B5B; /* Warm brown */
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    color: #3E2723;
+  }
+  
+  input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5C4033; /* Darker brown */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3E2723;
+  }
+  
+  span {
+    color: #3E2723;
+    cursor: pointer;
+  }
+  
+  span:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,48 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Home from './components/Home';
+import Breathing from './components/Breathing';
 import './App.css';
 
 function App() {
-  const [phase, setPhase] = useState('Inhale');
-  const [circleSize, setCircleSize] = useState(100);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPhase((prevPhase) => (prevPhase === 'Inhale' ? 'Hold' : prevPhase === 'Hold' ? 'Exhale' : 'Inhale'));
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (phase === 'Inhale') {
-      setCircleSize(200);
-    } else if (phase === 'Exhale') {
-      setCircleSize(100);
-    }
-  }, [phase]);
-
   return (
-    <div className="app">
-      <h1>Breathing Exercise</h1>
-      <div className="circle" style={{ width: circleSize, height: circleSize }}></div>
-      <p className="instruction">{phase}</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigate replace to="/login" />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/home" element={<Home />} />  {/* NEW */}
+      <Route path="/breathing" element={<Breathing />} />
+    </Routes>
   );
 }
 
 export default App;
-
-
-// import React from 'react';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="app">
-//       <h1>Breathing Exercise</h1>
-//       <p>This is a simple breathing exercise app.</p>
-//     </div>
-//   );
-// }
-
-// export default App;
