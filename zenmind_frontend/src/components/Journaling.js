@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "./Journaling.css";
+
 
 const Journaling = () => {
   const [entry, setEntry] = useState({
@@ -98,8 +100,13 @@ const Journaling = () => {
   return (
     <div className="journal-wrapper">
     <div className="journal-page">
+
       <h1>My Daily Journal</h1>
+      
       <div className="search-filter-container">
+      <Link to="/HeatMap" className="primary-button">View Heatmap</Link>
+      <Link to="/JournalEntries" className="primary-button">View Previous Enteries</Link>
+      <br></br>
         <input
           type="text"
           placeholder="Search entries..."

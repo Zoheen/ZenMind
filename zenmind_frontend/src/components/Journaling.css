@@ -28,6 +28,19 @@
   font-family: Arial, sans-serif;
 }
 
+primary-button, .cta-button {
+  background-color: var(--primary-button);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
 
 
 .journal-page {
